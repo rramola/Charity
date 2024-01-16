@@ -7,42 +7,20 @@ body {
 
 .header {
     display: flex;
-    background-color: black;
+    background-color: brown;
     color: white;
-    height: 20em;
-    transform-origin: right;
-    transform: skew(0deg, 4deg);
-    position: relative;
-    text-align: center;
-
-}
-
-.header > .header_image {
-    display: flex;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    color: white;
-    text-align: center;
-
-}
-
-.header > .header_image > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 15em;
 }
 
 
 .header > .text {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     width: 100%;
     position: absolute;
     color: white;
-    top: 10em;
-    transform: skew(0deg, 176deg);
-    font-size: 1.5em;
+    top: 2em;
+    font-size: 4em;
 
 }
 
