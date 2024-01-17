@@ -72,3 +72,8 @@ body {
 .squares_container > .square > .form > .comments{
     height: 4em;
 }
+
+
+.squares_container > .square > .form > .submit{
+    width: 10em;
+}
