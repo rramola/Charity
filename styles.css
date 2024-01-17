@@ -7,7 +7,6 @@ body {
 
 .header {
     display: flex;
-    background-color: purple;
     color: white;
     height: 15em;
 }
