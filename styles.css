@@ -1,16 +1,38 @@
 body {
     margin: 0px;
     padding: 0px;
-    height: 100vh;
     background-color: rgb(10, 10, 10);
 }
+.page-content-container {
+    height: 100%;
+    width: 100%;
 
-.header {
-    display: flex;
-    color: white;
-    height: 15em;
+
 }
 
+.header-container {
+    display: flex;
+    color: white;
+    height: 50%;
+    object-fit: contain;
+    margin-bottom: 5rem;
+}
+
+#header-text {
+    left: 0;
+    position:absolute;
+    text-align:center;
+    top: 30px;
+    width: 100%;
+    font-size: 4rem;
+}
+
+#header-image {
+    height: 500px;
+    position: relative;
+    text-align: center;
+    opacity: 50%;
+}
 
 
 .header > .text {
@@ -23,43 +45,63 @@ body {
     font-size: 4em;
 }
 
-.header > img {
-   width: 100%;
-   object-fit: cover;
-}
+
 
 .squares_container {
-    margin-top: 10%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    color: white;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 2rem;
 }
 
-.squares_container > .square {
-    width: 40vw;
+
+.square-one, .square-two, .square-three, .square-four {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.square-one img, .square-four img {
+    width: 100%;
     height: 100%;
-}
-
-.squares_container > .square > h2 {
-    font-size: 2.5em;
-}
-
-
-.squares_container > .square > img {
-    width: 40vw;
-    height: 50vh;
     object-fit: cover;
 }
 
-.squares_container > .square > .form {
+.square-two, .square-three {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.square-two {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+#square-two-text {
+    margin: 0;
+    font-size: 2rem;
+}
+
+
+ img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.squares_container > .square-three > .form {
     padding-top: .8em;
     display: flex;
     flex-direction: column;
     row-gap: 2em;
+    width: 70%;
 }
 
-.squares_container > .square > .form > .donation_text {
+.squares_container > .square-three > .form > .donation_text {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -67,12 +109,28 @@ body {
 }
 
 
-
-.squares_container > .square > .form > .comments{
+.squares_container > .square-three > .form > .comments{
     height: 4em;
 }
 
 
-.squares_container > .square > .form > .submit{
+.squares_container > .square-three > .form > .submit{
     width: 10em;
+}
+
+@media (max-width: 850px) {
+    .squares_container {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+        
+    }
+    .square-one, .square-two, .square-three,S{
+       padding: 0;
+       width: 90%;
+    }
+    .square-four{
+        width: 100%;
+    }
 }
